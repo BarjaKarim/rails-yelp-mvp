@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<nav class=navbar navbar-inverse role=navigation>
+  <div class="container-fluid">
+    <a class=navbar navbar-inverse role=navigation>The fork</a>
+      <button class="btn btn-light" type="submit"><%= link_to "New restaurant", new_restaurant_path  %></button>
+    </form>
+  </div>
+</nav>
+
+<h1>Restaurants</h1>
+
+<div id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New restaurant", new_restaurant_path %>
